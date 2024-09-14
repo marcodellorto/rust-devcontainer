@@ -1,0 +1,45 @@
+{
+  "name": "Rust",
+  "build": {
+    "dockerfile": "./Dockerfile",
+    "context": "."
+  },
+  "postCreateCommand": "rustc --version",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer",
+        "dustypomerleau.rust-syntax",
+        "tamasfe.even-better-toml",
+        "eamodio.gitlens",
+        "davidanson.vscode-markdownlint",
+        "ms-azuretools.vscode-docker",
+        "shardulm94.trailing-spaces",
+        "Gruntfuggly.todo-tree",
+        "bierner.emojisense",
+        "stkb.rewrap",
+        "vscode-icons-team.vscode-icons",
+        "github.vscode-pull-request-github",
+        "redhat.vscode-yaml",
+        "bajdzis.vscode-database",
+        "IBM.output-colorizer",
+        "jrebocho.vscode-random",
+        "alefragnani.Bookmarks",
+        "editorconfig.editorconfig",
+        "vadimcn.vscode-lldb"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSaveTimeout": 3000,
+        "[rust]": {
+          "editor.defaultFormatter": "rust-lang.rust-analyzer"
+        },
+        "remote.extensionKind": {
+          "ms-azuretools.vscode-docker": "workspace"
+        }
+      }
+    }
+  },
+  "remoteUser": "root"
+}
